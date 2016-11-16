@@ -1,0 +1,22 @@
+{
+  "name": "Customer",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "campaigns": {
+      "type": "hasMany",
+      "model": "Campaign",
+      "foreignKey": "authorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
